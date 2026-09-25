@@ -1,0 +1,20 @@
+# .NET
+backend/**/bin/
+backend/**/obj/
+backend/**/*.db
+backend/**/appsettings.Development.json
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# OS / editor
+.DS_Store
+.vscode/
+
+# documentation
+docs/
+
+# misc
+.claude/

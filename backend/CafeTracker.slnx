@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CafeTracker.Api/CafeTracker.Api.csproj" />
+  <Project Path="CafeTracker.Data/CafeTracker.Data.csproj" />
+</Solution>

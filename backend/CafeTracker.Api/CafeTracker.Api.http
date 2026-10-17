@@ -1,6 +1,18 @@
-@CafeTracker.Api_HostAddress = http://localhost:5037
+@host = http://localhost:5037
 
-GET {{CafeTracker.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+### 1. Register
+POST {{host}}/api/auth/register
+Content-Type: application/json
 
-###
+{ "firstName": "Test", "lastName": "User", "email": "test@example.com", "password": "Passw0rd!" }
+
+### 2. Login (the token is saved automatically for request 3)
+# @name login
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{ "email": "test@example.com", "password": "Passw0rd!" }
+
+### 3. Who am I? (run request 2 first)
+GET {{host}}/api/auth/me
+Authorization: Bearer {{login.response.body.token}}
